@@ -4,13 +4,13 @@ import com.supermarket.model.Product;
 import com.supermarket.repository.ProductsRepository;
 import org.springframework.stereotype.Repository;
 import javax.annotation.PostConstruct;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 @Repository
 public class InMemoryProductsRepository implements ProductsRepository {
 
-    private List<Product> supermarketProducts = new LinkedList<>();
+    private Map<Integer,Product> supermarketProducts = new HashMap<>();
 
     @PostConstruct
     public void init() {
@@ -23,7 +23,7 @@ public class InMemoryProductsRepository implements ProductsRepository {
 
     @Override
     public void addProduct(Product product) {
-        supermarketProducts.add(product);
+        supermarketProducts.put(product.getId(),product);
     }
 
     @Override
@@ -32,7 +32,7 @@ public class InMemoryProductsRepository implements ProductsRepository {
     }
 
     @Override
-    public List<Product> getAllProducts() {
+    public Map<Integer,Product> getAllProducts() {
         return supermarketProducts;
     }
 }

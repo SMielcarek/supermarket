@@ -1,20 +1,21 @@
 package com.supermarket.model;
 
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Cart {
 
-    private List<Product> listOfProducts;
+    private Map<Integer,CartItem> listOfItems = new HashMap<>();
     private int totalValue;
 
     public Cart() {}
 
-    public List<Product> getListOfProducts() {
-        return listOfProducts;
+    public Map<Integer,CartItem> getListOfItems() {
+        return listOfItems;
     }
 
-    public void setListOfProducts(List<Product> listOfProducts) {
-        this.listOfProducts = listOfProducts;
+    public void setListOfItems(Map<Integer,CartItem> listOfProducts) {
+        this.listOfItems = listOfProducts;
     }
 
     public int getTotalValue() {

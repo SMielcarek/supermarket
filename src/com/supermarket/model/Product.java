@@ -59,4 +59,8 @@ public class Product {
         this.specialQuantity = specialQuantity;
     }
 
+    public boolean isMultiPriced() {
+        return (specialPrice > 0) && (specialQuantity > 0);
+    }
+
 }

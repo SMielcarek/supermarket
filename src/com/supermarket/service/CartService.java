@@ -2,14 +2,12 @@ package com.supermarket.service;
 
 import com.supermarket.model.Cart;
 import com.supermarket.model.Product;
-
-
-import java.util.List;
+import java.util.Map;
 
 public interface CartService {
 
-    void addItemToCart();
+    void addItemToCart(int id);
+    void deleteItemFromCart(int id);
     Cart doCheckout();
-    List<Product> retrieveProducts();
 
 }
