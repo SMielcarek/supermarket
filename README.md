@@ -1,7 +1,7 @@
-#Supermarket checkout component
+# Supermarket checkout component
 The supermarket checkout component has been built using REST API. Below is the list of possible operations the component can perform.
 
-##Cart
+## Cart
 Display welcome message:
 
 `GET {appContext}/api/cart`
@@ -18,7 +18,7 @@ Delete product item from cart (id is a product id):
 
 `DELETE {appContext}/api/cart/delete/{id}`
 
-##Products
+## Products
 List of all available products in the market:
 
 `GET {appContext}/api/products`
@@ -27,7 +27,7 @@ Retrieve the product from the market based on the product id:
 
 `GET {appContext}/api/products/{id}`
 
-##Compile project
+## Compile project
 To compile project, run maven command in the main project folder:
 
 `mvn clean install`
